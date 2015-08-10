@@ -142,6 +142,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aVs-VI-tky">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dR5-rY-gih">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="608"/>
                             </scrollView>
@@ -150,12 +153,15 @@
                         <constraints>
                             <constraint firstItem="dR5-rY-gih" firstAttribute="top" secondItem="mV2-cT-jP9" secondAttribute="top" id="37E-bt-95Q"/>
                             <constraint firstItem="dR5-rY-gih" firstAttribute="leading" secondItem="mV2-cT-jP9" secondAttribute="leading" id="5jG-AT-KvJ"/>
+                            <constraint firstAttribute="centerY" secondItem="aVs-VI-tky" secondAttribute="centerY" id="Jxj-vi-VsB"/>
                             <constraint firstItem="dR5-rY-gih" firstAttribute="bottom" secondItem="KMH-Ec-Y5S" secondAttribute="top" constant="8" symbolic="YES" id="Sbb-95-HMo"/>
+                            <constraint firstAttribute="centerX" secondItem="aVs-VI-tky" secondAttribute="centerX" id="ZVt-k5-fWm"/>
                             <constraint firstAttribute="trailing" secondItem="dR5-rY-gih" secondAttribute="trailing" id="iyw-fr-4yH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="dR5-rY-gih" id="OVD-0u-yRb"/>
+                        <outlet property="spinner" destination="aVs-VI-tky" id="mUc-po-P5v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3D6-so-nJD" userLabel="First Responder" sceneMemberID="firstResponder"/>
